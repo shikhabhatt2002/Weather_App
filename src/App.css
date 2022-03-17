@@ -1,0 +1,131 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'montseratt' , sans-serif;
+    background-color: bisque;
+}
+
+.app{
+    background-image: url(./images/cold_bg.jfif);
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4 ease-out;
+}
+
+main{
+    min-height:100vh;
+
+    /*  make the image not that bright  */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75)); 
+    padding:25px;
+    
+}
+
+.search_box
+{
+    width:100%;
+    margin: 0 0 75px;
+}
+.search_box .search_bar{
+    display:block;
+    width:100%;
+    padding:15px;
+
+    appearance: none;
+    background:none;
+    border:none;
+    outline:none;
+
+
+    background-color:rgba(255,255,255,0.5);
+    border-radius: 0px 0px 16px 16px;
+    /* main me hai 25 px to top me le aayega */
+    margin-top:-25px; 
+
+
+    box-shadow:0px 5px rgba(0,0,0,0.2);
+    font-size:20px;
+
+    transition:0.4s ease;
+}
+
+.search_box .search_bar:focus{
+    background-color: rgba(255,255,255,0.75);
+}
+
+
+.location-box .location{
+    color:#FFF;
+    font-size:35px;
+    font-weight:500;
+    text-transform:capitalize;
+    text-align: center;
+    text-shadow:3px 3px rgba(50,50,70,0.5);
+}
+.location-box .date{
+    color:#FFF;
+    font-size:20px;
+    font-weight:300;
+    font-style:italic;
+    margin-top:5px;
+    text-align:center;
+    text-shadow:2px 2px rgba(50,50,70,0.5);
+
+}
+.weather-box{
+    text-align:center;
+}
+
+.weather-box .temp{
+    position: relative;
+    display: inline-block;
+    margin:30px auto;
+    background-color: rgba(255,255,255,0.2);
+    border-radius:16px;
+
+    padding:15px 25px;
+
+    color:#FFF;
+    /* font-size:102px; */
+    font-size:4rem;
+    font-weight:900;
+
+    text-shadow:3px 6px rgba(50, 50, 70, 0.5);
+    text-align:center;
+    box-shadow:3px 6px rgba(0,0,0,0.2);
+}
+
+.weather-box .temp_min_max{
+    color:#FFF;
+    /* font-size: 35px; */
+    font-size:1.5rem;
+    font-weight:700;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+}
+
+.app.warm{
+    background-image:url(./images/warm_bg.jpg);
+
+}
+
+
+.error_msg{
+    text-align:center;
+    font-size:40px;
+}
+
+@media only screen and (max-width: 370px) {
+   
+    .weather-box .temp{
+        font-size: 2rem;
+    }
+   
+    .weather-box .temp_min_max{
+        font-size: 1rem;
+    }
+
+  }
